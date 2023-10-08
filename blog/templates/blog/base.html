@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static '/css/blog.css' %}" type="text/css" />
+    </head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/" class="home">Home</a>
+            <a href="/portfolio" class="home">Portfolio</a>
+            <a href="/login" class="home">Login</a>
+            <a href="/services" class="home">Services</a>
+        </div>
+        <div class="menu-button">
+            <button class="dropbtn" onclick="toggleDropdown()">☰ Menu</button>
+            <ul class="dropdown-content" id="dropdownContent">
+                <li><a href="/">Home</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/services">Services</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container"> 
+        <div class="content">
+            <h1><a href="/" class="contenta">Django Blog</a></h1>
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <script src="{% static '/js/blog.js' %}"></script>
+</body>
+
+</html>

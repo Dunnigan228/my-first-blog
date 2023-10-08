@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+    background: linear-gradient(235deg, #0a3c5e, #512563);
+    color: white;
+}
+
+.header {
+    background-color: rgba(81, 37, 99, 0.3); /* Цвет фона с прозрачностью */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 1.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-button {
+    display: none;
+}
+
+.dropbtn {
+    background-color: #512563;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #512563;
+    min-width: 160px;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #7a3885;
+}
+.menu-button:hover .dropdown-content {
+    display: block;
+}
+
+.header .home,
+.header .dropbtn {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.header .home:hover,
+.header .dropbtn:hover {
+    transform: rotate(10deg) scale(1.2);
+    color: #ffcc00;
+    text-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
+}
+
+.show {
+    display: block;
+}
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Делаем текст белым */
+}
+.contenta{
+    text-decoration: none; /* Убираем подчеркивание */
+    color: rgb(100, 13, 101); /* Делаем текст белым */
+}
+p {
+    color: rgb(100, 13, 101);
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .dropdown.show .logo {
+        display: flex;
+    }
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+    color: #512563;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin: 10px 0;
+    color: #333;
+}
+
+.contact-list li:first-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #512563;
+}
+
+.contact-list li:nth-child(2),
+.contact-list li:nth-child(3) {
+    color: #512563;
+    font-weight: bold;
+}
+
+.contact-list li:nth-child(odd) {
+    background-color: #f7f7f7;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.contact-list li:nth-child(even) {
+    background-color: #e3e3e3;
+    padding: 8px;
+    border-radius: 5px;
+}
+.image-slider {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
